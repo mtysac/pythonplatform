@@ -20,9 +20,6 @@ class Editor:
         self.assets = { # add all pngs used here !!! btw check if images or image is typed
             'grass' : load_images('tiles/grass'),
             'cement' : load_images('tiles/cement'),
-            'dates' : load_images('dates'),
-            'signs': load_images('signs'),
-            'PICS' : load_images('PICS'),
             'food' : load_images('food'),
             'back' : load_images('back'),
         }
@@ -118,7 +115,7 @@ class Editor:
                         self.movement[0] = True
                     if event.key == pygame.K_d:
                         self.movement[1] = True
-                    if event.key == pygame.K_w:  # JUMP NOT WORKING GRAVITY NOT WORKING NOOOO
+                    if event.key == pygame.K_w:  # JUMP NOT WORKING GRAVITY NOT WORKING NOOOO edit:idk what happened here
                         self.movement[2] = True
                     if event.key == pygame.K_s:
                         self.movement[3] = True
@@ -135,7 +132,7 @@ class Editor:
                         self.movement[0] = False
                     if event.key == pygame.K_d:
                         self.movement[1] = False
-                    if event.key == pygame.K_w:  # JUMP NOT WORKING GRAVITY NOT WORKING NOOOO
+                    if event.key == pygame.K_w:  # JUMP NOT WORKING GRAVITY NOT WORKING NOOOO edit:idk what happened here
                         self.movement[2] = False
                     if event.key == pygame.K_s:
                         self.movement[3] = False

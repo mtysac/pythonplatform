@@ -15,7 +15,7 @@ from scripts.clouds import Clouds
 class Game:
     def __init__(self):
 
-        pygame.display.set_caption('memory lane')
+        pygame.display.set_caption('example')
         self.screen = pygame.display.set_mode((1280, 720), pygame.RESIZABLE) # og coords is 640, 480
         self.display = pygame.Surface((512, 340)) # converted
 
@@ -26,9 +26,6 @@ class Game:
         self.assets = { # add all pngs used here !!! btw check if images or image is typed
             'grass' : load_images('tiles/grass'),
             'cement' : load_images('tiles/cement'),
-            'dates' : load_images('dates'),
-            'signs': load_images('signs'),
-            'PICS' : load_images('PICS'),
             'food' : load_images('food'),
             'back' : load_images('back'),
             'player' : load_image('entities/player/player.png'),
@@ -48,9 +45,9 @@ class Game:
         self.scroll = [0, 0]
 
     def run(self):
-        pygame.mixer.music.load('data/bestpart.mp3')
-        pygame.mixer.music.set_volume(0.8)
-        pygame.mixer.music.play(-1) # -1 means loop forever
+        #pygame.mixer.music.load('data/bestpart.mp3')
+        #pygame.mixer.music.set_volume(0.8)
+        #pygame.mixer.music.play(-1) # -1 means loop forever
 
         while True:
             self.display.fill((195, 220, 255)) # rgb colour coordinates
