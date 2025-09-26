@@ -1,11 +1,11 @@
-import sys #OG game by itself
+import sys #OG game by itself no menu
 
 import pygame
 
 pygame.init()
 
-new_icon = pygame.image.load('data/images/icon.png')
-pygame.display.set_icon(new_icon)
+#new_icon = pygame.image.load('data/images/icon.png')
+#pygame.display.set_icon(new_icon)
 
 from scripts.utils import load_image, load_images, Animation
 from scripts.entities import PhysicsEntity, Player
@@ -15,7 +15,7 @@ from scripts.clouds import Clouds
 class Game:
     def __init__(self):
 
-        pygame.display.set_caption('example')
+        pygame.display.set_caption('GAME!')
         self.screen = pygame.display.set_mode((1280, 720), pygame.RESIZABLE) # og coords is 640, 480
         self.display = pygame.Surface((512, 340)) # converted
 
@@ -45,9 +45,9 @@ class Game:
         self.scroll = [0, 0]
 
     def run(self):
-        #pygame.mixer.music.load('data/bestpart.mp3')
-        #pygame.mixer.music.set_volume(0.8)
-        #pygame.mixer.music.play(-1) # -1 means loop forever
+        pygame.mixer.music.load('data/gametime.mp3')
+        pygame.mixer.music.set_volume(0.8)
+        pygame.mixer.music.play(-1) # -1 means loop forever
 
         while True:
             self.display.fill((195, 220, 255)) # rgb colour coordinates
