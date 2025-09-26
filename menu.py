@@ -13,7 +13,7 @@ pygame.init()
 #new_icon = pygame.image.load('data/images/icon.png')
 #pygame.display.set_icon(new_icon)
 
-SCREEN = pygame.display.set_mode((1280, 720)) #(pygame.RESIZABLE)
+SCREEN = pygame.display.set_mode((1280, 720), pygame.RESIZABLE)
 
 BG = pygame.image.load("assets/Background.png")
 #add other bgs here
@@ -29,7 +29,7 @@ def play():
 
             def __init__(self):
                 pygame.display.set_caption('memory lane')
-                self.screen = pygame.display.set_mode((1280, 720),) #pygame.RESIZABLE) # og coords is 640, 480
+                self.screen = SCREEN # used to be pygame.display.set_mode((1280, 720), pygame.RESIZABLE) # og coords is 640, 480
                 self.display = pygame.Surface((512, 340)) # converted
 
                 self.clock = pygame.time.Clock()
